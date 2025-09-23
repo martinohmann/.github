@@ -4,7 +4,7 @@ name: sops-exec-env
 description: Securely execute commands with encrypted secrets in GitHub Actions.
 author: martinohmann
 inputs:
-  env_file:
+  env-file:
     description: 'The environment file to decrypt and pass to the command'
     required: true
   run:
