@@ -16,4 +16,4 @@ runs:
     - name: Run sops exec-env
       shell: bash
       run: |
-        sops exec-env '${{ inputs.env_file }}' '${{ inputs.run }}'
+        sops exec-env '${{ inputs.env-file }}' '${{ inputs.run }}'
