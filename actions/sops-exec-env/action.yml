@@ -4,6 +4,9 @@ name: sops-exec-env
 description: Securely execute commands with encrypted secrets in GitHub Actions.
 author: martinohmann
 inputs:
+  age-key:
+    description: 'The age key for decrypting the secret.'
+    required: true
   env-file:
     description: 'The environment file to decrypt and pass to the command'
     required: true
@@ -14,6 +17,8 @@ runs:
   using: composite
   steps:
     - name: Run sops exec-env
+      env:
+        SOPS_AGE_KEY: ${{ inputs.age-key }}
       shell: bash
       run: |
         sops exec-env '${{ inputs.env-file }}' '${{ inputs.run }}'
