@@ -1,10 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended",
+    "config:best-practices",
     "docker:enableMajor",
-    "helpers:pinGitHubActionDigests",
-    ":dependencyDashboard",
+    "mergeConfidence:all-badges",
     ":disableRateLimiting",
     ":semanticCommits",
     ":timezone(Europe/Berlin)",
