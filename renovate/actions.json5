@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Monthly GitHub Actions updates with digest pinning and grouped PRs.",
+  "extends": [
+    "github>martinohmann/.github//renovate/base.json5",
+    "helpers:pinGitHubActionDigestsToSemver"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": ["github-actions"],
+      "groupName": "GitHub Actions",
+      "extends": ["schedule:monthly"]
+    },
+    {
+      "description": ["Automerge trusteed GitHub Actions"],
+      "matchManagers": ["github-actions"],
+      "automerge": true,
+      "automergeType": "branch",
+      "ignoreTests": true,
+      "matchPackageNames": [
+        "/^actions\/.*$/",
+        "/^github\/.*$/",
+        "/^renovatebot\/github-action$/"
+      ],
+      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "minimumReleaseAge": "3 days",
+      "extends": ["schedule:monthly"]
+    }
+  ]
+}
