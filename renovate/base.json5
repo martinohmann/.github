@@ -7,7 +7,6 @@
     ":dependencyDashboard",
     ":disableRateLimiting",
     ":semanticCommits",
-    ":semanticCommitTypeAll(chore)",
     ":timezone(Europe/Berlin)",
   ],
   // Basics

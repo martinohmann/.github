@@ -1,0 +1,7 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>martinohmann/.github//renovate/actions.json5",
+    "github>martinohmann/.github//renovate/lockfile.json5"
+  ]
+}

@@ -1,9 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>martinohmann/.github//renovate/actions.json5",
-    "github>martinohmann/.github//renovate/labels.json5",
-    "github>martinohmann/.github//renovate/lockfile.json5"
+    ":semanticCommitTypeAll(chore)",
+    "github>martinohmann/.github//renovate/default.json5",
+    "github>martinohmann/.github//renovate/labels.json5"
   ],
   "schedule": ["on the first day of the month"]
 }
